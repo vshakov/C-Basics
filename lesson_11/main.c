@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 {
     char path[255] = {0};
     getcwd(path, 255);
-    printf("patch = %s\n", path);
+    printf("path = %s\n", path);
     
     show_dir_files(path);
     
