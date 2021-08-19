@@ -8,17 +8,17 @@
 
 #include <list_files.h>
 
-void show_dir_files(const char *strdir);
-
 int main(int argc, char **argv)
 {
-    char path[255] = {0};
-    scanf("%s", path);
-    /*getcwd(path, 255);*/
+    char* path;
+    path = (char*)malloc(255);
+    /*scanf("%s", path);*/
+    getcwd(path, 255);
     printf("path = %s\n", path);
     
     show_dir_files(path);
     
+    
+    free(path);
     return 0;
-
 }
