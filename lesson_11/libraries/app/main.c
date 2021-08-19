@@ -12,8 +12,8 @@ int main(int argc, char **argv)
 {
     char* path;
     path = (char*)malloc(255);
-    /*scanf("%s", path);*/
-    getcwd(path, 255);
+    scanf("%s", path);
+    /*getcwd(path, 255);*/
     printf("path = %s\n", path);
     
     show_dir_files(path);
