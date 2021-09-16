@@ -4,7 +4,6 @@
 #include <string.h>
 #include <time.h>
 
-
 struct measures {
     int year;
     int month;
@@ -25,10 +24,8 @@ void fprintf_measures(m_t m);
 
 int main(int argc, char** argv)
 {
-
     
-    
-    int N = 1000;
+    int N = 10;
     srand(time(0));
 
     m_t m[N];
@@ -94,7 +91,6 @@ void fprintf_measures(m_t m)
         printf("File error");
         exit(0);
     }
-
     
     fprintf(fp,"%d,%d,%d,%d,%d,%d\n", m.year, m.month, m.day, m.hour, m.minute, m.temperature);
 
