@@ -13,11 +13,12 @@ struct measures {
   {
     if(argc<2)
     {
+        printf ("Error. Enter the name of file\n");
         return -1;
     }
     char *file=argv[1];
 
-    FILE *f=fopen("temp.csv", "r");
+    FILE *f=fopen(file, "r");
     if(!f)
     {
         printf("Error opening file\n");
@@ -27,7 +28,7 @@ struct measures {
     while (!feof(f))
     {
         struct measures m;
-        int scanfret=fscanf(f, "%d;%d;%d;%d;%d;%d",
+        int scanfret=fscanf(f, "%d,%d,%d,%d,%d,%d",
             &m.year,
             &m.month,
             &m.day,

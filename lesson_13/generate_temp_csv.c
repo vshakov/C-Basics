@@ -25,7 +25,7 @@ void fprintf_measures(m_t m);
 int main(int argc, char** argv)
 {
     
-    int N = 10;
+    int N = 10000;
     srand(time(0));
 
     m_t m[N];
@@ -49,9 +49,9 @@ int main(int argc, char** argv)
     }
 
 FILE *fp;
-fp = fopen("temp.csv", "w");
+/*fp = fopen("temp.csv", "w");
 fprintf(fp,"%s,%s,%s,%s,%s,%s\n","YEAR","MONTH","DAY","HOUR","MINUTE","TEMPERATURE");
-fclose(fp);
+fclose(fp);*/
 
    for(int i=0;i<N;i++)
     {
