@@ -25,7 +25,7 @@ void fprintf_measures(m_t m);
 int main(int argc, char** argv)
 {
     
-    int N = 10000;
+    int N = 10;
     srand(time(0));
 
     m_t m[N];
@@ -78,7 +78,7 @@ void init_measures(m_t *m)
 
 void print_measures(m_t m)
 {
-    printf("%d %d %d %d %d %d\n", m.year, m.month, m.day, m.hour, m.minute, m.temperature);
+    printf("%d;%d;%d;%d;%d;%d\n", m.year, m.month, m.day, m.hour, m.minute, m.temperature);
 }
 
 void fprintf_measures(m_t m)
@@ -92,7 +92,7 @@ void fprintf_measures(m_t m)
         exit(0);
     }
     
-    fprintf(fp,"%d,%d,%d,%d,%d,%d\n", m.year, m.month, m.day, m.hour, m.minute, m.temperature);
+    fprintf(fp,"%d;%d;%d;%d;%d;%d\n", m.year, m.month, m.day, m.hour, m.minute, m.temperature);
 
     fclose(fp);
 }
